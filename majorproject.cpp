@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 #include<string.h>
 using namespace std;
 
@@ -185,12 +186,15 @@ class student{
 };
 int main()
 { 
-    int need;
+    int need,i;
     student a;
     a.StudentDetails();
     a.StudentMarkDetails();
+    for(i=0;i<6;i++)
+    {
       cout<<"--------Student Menu--------\n";
-      cout<<"1-->Insert new marks\n2-->Delete existing mark\n3-->Modify existing marks\n4-->Display Student data\n\n Select your need:";
+      
+      cout<<"1-->Insert new marks\n2-->Delete existing mark\n3-->Modify existing marks\n4-->Display Student data\n5-->Exit\n Select your need:";
        cin>>need;
        cout<<"***************************************************************\n";
        switch(need){
@@ -208,11 +212,14 @@ int main()
           a.DisplayStudentDetails();
           a.DisplayMarkdetails();
            break;
+           case 5:exit(0);
            default :
            cout<<"Invalid Choice!!";
            break;
        }
-       cout<<"\n******************************************************************";
     
+       cout<<"\n******************************************************************";
+    }  
    return 0;
 }
+
